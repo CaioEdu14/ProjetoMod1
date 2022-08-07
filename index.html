@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"
+    />
+    <title>Dev in Knowledge</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="title">
+          <img src="book 1.png" alt="" srcset="" />
+          <div class="title-text">
+            <span> DEVin<span style="font-size: 32px">Knowledge</span></span>
+            <span>Learn, code and Save</span>
+          </div>
+        </div>
+        <div class="form">
+          <div class="input-group">
+            <span>Título</span>
+            <input type="text" placeholder="Digite um título" id="title" />
+          </div>
+          <div class="input-group">
+            <span>Linguagem/Skill</span>
+            <input
+              type="text"
+              placeholder="Digite uma linguagem ou skill"
+              id="skill"
+            />
+          </div>
+          <div class="input-group">
+            <span>Categoria</span>
+            <select name="" id="category" placeholder="">
+              <option value="" disabled selected>
+                Selecione uma categoria
+              </option>
+              <option>FrontEnd</option>
+              <option>BackEnd</option>
+              <option>FullStack</option>
+              <option>SoftSkill</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <span>Descrição</span>
+            <textarea
+              name=""
+              id="description"
+              cols="30"
+              rows="10"
+              placeholder="Escreva aqui o detalhamento da sua dica..."
+            ></textarea>
+          </div>
+          <div class="input-group">
+            <span>Vídeo do Youtube</span>
+            <input
+              type="text"
+              id="youtubeVideo"
+              placeholder="https://suaurl.com"
+            />
+          </div>
+          <div style="display: flex">
+            <button class="yellow-button" onclick="clearForm()">Limpar</button>
+            <button class="green-button" onclick="saveForm()">Salvar</button>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="content-header">
+          <div class="header-card">
+            <span>Total</span>
+            <span id="total-items">0</span>
+          </div>
+          <div class="header-card">
+            <span>FrontEnd</span>
+            <span id="total-front-end">0</span>
+          </div>
+          <div class="header-card">
+            <span>BackEnd</span>
+            <span id="total-back-end">0</span>
+          </div>
+          <div class="header-card">
+            <span>FullStack</span>
+            <span id="total-full-stack">0</span>
+          </div>
+          <div class="header-card">
+            <span>SoftSkill</span>
+            <span id="total-soft-skill">0</span>
+          </div>
+        </div>
+        <div class="search-row">
+          <input
+            type="text"
+            id="search"
+            placeholder="Digite um título para buscar..."
+            style="width: 100%"
+          />
+          <button onclick="search()">Buscar</button>
+        </div>
+        <div id="content" class="content"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="script.js"></script>
